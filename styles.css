@@ -186,16 +186,16 @@ text-decoration-skip-ink: none;
 }
 
 .button{
-    width: Fixed (342px)px;
-    height: Fixed (40px)px;
-    top: 497px;
-    left: 58px;
-    padding: 10px 0px 0px 0px;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
     gap: 8px;
-    border-radius: 4px 0px 0px 0px;
-    opacity: 0px;
+    border-radius:10px;
+    border-color: #fff;
     background: #FF6B82;
     color: #fff;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
 }
 
 .dropdown-grid {
