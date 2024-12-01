@@ -5,18 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #fff; /* Ensure the background color matches */
+    background-color: #fff;
 }
 
- /* Section Container */
- /* .section-container {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
-} */
 
 .bogo-container {
     text-align: center;
@@ -48,16 +39,16 @@ body {
     font-size: 24px;
     color: #FF6B82;
     font-weight: bold;
-    background-color: #fff; /* Matches the body background color */
+    background-color: #fff;
     padding: 0 10px;
-    position: relative; /* Ensures it overlaps the lines */
-    z-index: 1; /* Ensures it stays above the lines */
+    position: relative;
+    z-index: 1;
 }
 
 /* Pricing Section */
 .pricing-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     width: 400px;
     padding: 10px;
@@ -65,6 +56,11 @@ body {
     border-radius: 8px;
     background-color: #fff;
     margin-top: 10px;
+}
+
+.pricing-card {
+    display: flex;
+    justify-content: space-between;
 }
 
 .pricing-left {
@@ -94,13 +90,13 @@ body {
 .radio-circle input[type="radio"]:checked::before {
     content: '';
     position: absolute;
-    top: 50%; /* Start positioning from the center */
-    left: 50%; /* Start positioning from the center */
-    transform: translate(-50%, -50%); /* Center the inner circle */
-    width: 8px; /* Inner circle size */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
     height: 8px;
-    background-color: #FF6B82; /* Fill color of the inner circle */
-    border-radius: 50%; /* Makes the inner circle a circle */
+    background-color: #FF6B82;
+    border-radius: 50%;
 }
 
 .unit-info {
@@ -126,7 +122,7 @@ body {
 
 .standard-price {
     font-size: 12px;
-    font-weight:400;
+    font-weight: 400;
     color: #555;
     margin: 0;
 }
@@ -154,16 +150,16 @@ body {
     margin: 0;
 }
 
-.total-amount{
+.total-amount {
     display: flex;
-    justify-content: space-between; /* Distributes the child elements to the edges */
-    align-items: center; /* Ensures vertical alignment */
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 
 }
 
 
-.free-delivery{
+.free-delivery {
     font-family: Inter;
     font-size: 14px;
     font-weight: 500;
@@ -174,22 +170,22 @@ body {
     color: #FF6B82;
 }
 
-.total-price{
-font-family: Inter;
-font-size: 14px;
-font-weight: 400;
-line-height: 16.94px;
-text-align: right;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+.total-price {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 
 }
 
-.button{
+.button {
     width: 100%;
     padding: 20px 0px 0px 0px;
     gap: 8px;
-    border-radius:10px;
+    border-radius: 10px;
     border-color: #fff;
     background: #FF6B82;
     color: #fff;
@@ -199,9 +195,8 @@ text-decoration-skip-ink: none;
 }
 
 .dropdown-grid {
-    display: none; /* Hidden by default */
+    display: none;
     width: 320px;
-    border: 1px solid #FF6A90; /* Light pink border */
     border-radius: 8px;
     padding: 20px;
     background-color: white;
@@ -248,10 +243,56 @@ select {
 
 select:focus {
     outline: none;
-    border: 1px solid #FF6A90; /* Highlight focus */
-    box-shadow: 0 0 4px rgba(255, 106, 144, 0.4);
+    border: 1px solid #FF6A90;
+   
 }
 
 .dropdown-grid.active {
-    display: grid; /* Show when active */
+    display: grid;
+}
+
+.add-to-cart-button {
+    display: inline-block;
+    background-color: #ff6b81;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%
+}
+
+.add-to-cart-button .plus-icon {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.dropdown-size {
+    padding-left: 70px;
+}
+
+.dropdown-grid-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-color {
+    padding-right: 75px;
+}
+
+.powered p {
+    font-family: Inter;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000066;
+
 }
