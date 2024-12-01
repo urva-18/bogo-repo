@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff; /* Ensure the background color matches */
+}
+
+ /* Section Container */
+ /* .section-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+} */
+
+.bogo-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.bogo-container::before,
+.bogo-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #C8C8C8;
+}
+
+.bogo-container::before {
+    left: 0;
+}
+
+.bogo-container::after {
+    right: 0;
+}
+
+.bogo-text {
+    display: inline-block;
+    font-size: 24px;
+    color: #FF6B82;
+    font-weight: bold;
+    background-color: #fff; /* Matches the body background color */
+    padding: 0 10px;
+    position: relative; /* Ensures it overlaps the lines */
+    z-index: 1; /* Ensures it stays above the lines */
+}
+
+/* Pricing Section */
+.pricing-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.pricing-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.radio-circle input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #FF6B82;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.radio-circle input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Start positioning from the center */
+    left: 50%; /* Start positioning from the center */
+    transform: translate(-50%, -50%); /* Center the inner circle */
+    width: 8px; /* Inner circle size */
+    height: 8px;
+    background-color: #FF6B82; /* Fill color of the inner circle */
+    border-radius: 50%; /* Makes the inner circle a circle */
+}
+
+.unit-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.unit-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.discount-badge {
+    font-size: 12px;
+    color: #fff;
+    background-color: #FF6B82;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.standard-price {
+    font-size: 12px;
+    font-weight:400;
+    color: #555;
+    margin: 0;
+}
+
+.pricing-right {
+    text-align: right;
+}
+
+.current-price {
+    font-family: Inter;
+    font-size: 14.46px;
+    font-weight: 500;
+    margin: 0;
+    color: #000;
+    line-height: 17.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.original-price {
+    font-size: 10px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin: 0;
+}
+
+.total-amount{
+    display: flex;
+    justify-content: space-between; /* Distributes the child elements to the edges */
+    align-items: center; /* Ensures vertical alignment */
+    width: 100%;
+
+}
+
+
+.free-delivery{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FF6B82;
+}
+
+.total-price{
+font-family: Inter;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.94px;
+text-align: right;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.button{
+    width: Fixed (342px)px;
+    height: Fixed (40px)px;
+    top: 497px;
+    left: 58px;
+    padding: 10px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
+    background: #FF6B82;
+    color: #fff;
+}
+
+.dropdown-grid {
+    display: none; /* Hidden by default */
+    width: 320px;
+    border: 1px solid #FF6A90; /* Light pink border */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+}
+
+.dropdown-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.dropdown-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.dropdown-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.dropdown-row label {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+select {
+    font-size: 14px;
+    padding: 6px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #F9F9F9;
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid #FF6A90; /* Highlight focus */
+    box-shadow: 0 0 4px rgba(255, 106, 144, 0.4);
+}
+
+.dropdown-grid.active {
+    display: grid; /* Show when active */
+}
